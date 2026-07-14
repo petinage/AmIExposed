@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AmIExposed</title>
+
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <a href="#" class="logo">
+
+        <img src="logo.svg" alt="AmIExposed Logo">
+
+        <span>AmIExposed</span>
+
+    </a>
+
+    <nav>
+
+        <a href="#">Search</a>
+        <a href="#">API</a>
+        <a href="#">Docs</a>
+        <a href="#">About</a>
+
+    </nav>
+
+</header>
+
+<main class="container">
+
+    <section class="hero">
+
+        <h1>Check your email for known data breaches</h1>
+
+        <p>
+            Search multiple public breach databases to determine
+            whether an email address has appeared in known data leaks.
+        </p>
+
+    </section>
+
+    <!-- SEARCH CARD: input, button, badge, AND results, all in one card -->
+
+    <section class="search-card">
+
+        <div class="search-row">
+
+            <input
+                id="emailInput"
+                type="email"
+                placeholder="Enter your email address..."
+                autocomplete="email">
+
+            <button id="searchButton">
+                Search
+            </button>
+
+        </div>
+
+        <div class="search-info">
+
+            <span>
+                Your searches are processed securely.
+            </span>
+
+            <span class="badge">
+                Secure Lookup
+            </span>
+
+        </div>
+
+        <!-- RESULTS: hidden until a search runs, filled dynamically -->
+
+        <div
+            class="results-card"
+            id="resultsCard"
+            hidden>
+
+            <div class="results-card-header">
+
+                <div>
+                    <h2>Results</h2>
+                    <p id="resultsSummary">
+                        Here's what we found across breach databases.
+                    </p>
+                </div>
+
+                <span
+                    class="searched-email"
+                    id="searchedEmail">
+                </span>
+
+            </div>
+
+            <!-- HIBP -->
+
+            <article class="provider" id="hibpProvider" hidden>
+
+                <div class="provider-header">
+
+                    <div class="provider-info">
+
+                        <div class="provider-icon">
+                            <img src="HIBP.jpg" alt="Have I Been Pwned">
+                        </div>
+
+                        <div>
+                            <h3>Have I Been Pwned</h3>
+                            <p id="hibpCount">Not checked yet</p>
+                        </div>
+
+                    </div>
+
+                    <span class="provider-status" id="hibpStatus"></span>
+
+                </div>
+
+                <div class="breaches" id="hibpBreaches"></div>
+
+            </article>
+
+            <!-- XposedOrNot -->
+
+            <article class="provider" id="xonProvider" hidden>
+
+                <div class="provider-header">
+
+                    <div class="provider-info">
+
+                        <div class="provider-icon">
+                            <img src="Xposed.jpeg" alt="XposedOrNot">
+                        </div>
+
+                        <div>
+                            <h3>XposedOrNot</h3>
+                            <p id="xonCount">Not checked yet</p>
+                        </div>
+
+                    </div>
+
+                    <span class="provider-status" id="xonStatus"></span>
+
+                </div>
+
+                <div class="breaches" id="xonBreaches"></div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>
+        Created by @imtojisans on Discord.
+    </p>
+
+    <p>
+        © 2026 AmIExposed
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
